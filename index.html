@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080817">
+<title>ADORA — Find. Join. Experience.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="cursor-glow" aria-hidden="true"></div>
+<header class="topbar">
+ <a class="logo" href="#"><svg class="logo-clover" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <g class="clover-leaves">
+    <path d="M31.8 31.5 C25.5 28.5 17.5 26.5 17.5 17.5 C17.5 8.5 28.5 7.5 32 18.5 C35.5 7.5 46.5 8.5 46.5 17.5 C46.5 26.5 38.5 28.5 32.2 31.5"/>
+    <path d="M32.5 31.8 C35.5 25.5 37.5 17.5 46.5 17.5 C55.5 17.5 56.5 28.5 45.5 32 C56.5 35.5 55.5 46.5 46.5 46.5 C37.5 46.5 35.5 38.5 32.5 32.2"/>
+    <path d="M32.2 32.5 C38.5 35.5 46.5 37.5 46.5 46.5 C46.5 55.5 35.5 56.5 32 45.5 C28.5 56.5 17.5 55.5 17.5 46.5 C17.5 37.5 25.5 35.5 31.5 32.5"/>
+    <path d="M31.5 32.2 C28.5 38.5 26.5 46.5 17.5 46.5 C8.5 46.5 7.5 35.5 18.5 32 C7.5 28.5 8.5 17.5 17.5 17.5 C26.5 17.5 28.5 25.5 31.5 31.5"/>
+  </g>
+  <path class="clover-stem" d="M33 34 C34 42 38 49 45 55"/>
+</svg>ADORA</a>
+ <nav><a class="active" href="#">Home</a><a href="#events">Events</a><a href="#categories">Categories</a><a href="#bookings">My Bookings</a></nav>
+ <div class="top-actions"><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☾</button><button class="sign-in" id="signIn" type="button">Login / Sign Up</button><button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button></div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-copy">
+  <div class="eyebrow">DISCOVER <b>·</b> REGISTER <b>·</b> EXPERIENCE</div>
+  <h1>Find. Join. <span>Experience<br class="desktop"> Amazing Events.</span></h1>
+  <p>Your campus &amp; community event hub — explore upcoming events, register in seconds, and never miss an experience.</p>
+  <div class="hero-buttons"><a class="btn primary" href="#events">Explore Events <span>➜</span></a><a class="btn secondary" href="#events"><span>▦</span> Event Calendar</a></div>
+ </div>
+ <div class="hero-visual" aria-label="Abstract holographic event panels">
+  <div class="visual-orbit orbit1"></div><div class="visual-orbit orbit2"></div><div class="visual-orbit orbit3"></div>
+  <div class="holo-panel panel-game"><span>🎮</span><small>GAMING</small></div>
+  <div class="holo-panel panel-code"><span>&lt;/&gt;</span><small>BUILD THE FUTURE</small></div>
+  <div class="holo-panel panel-concert"><div class="concert-art">♫</div><small>LIVE THE MOMENT</small></div>
+  <div class="spark s1">✦</div><div class="spark s2">✧</div>
+ </div>
+ <div class="wave" aria-hidden="true"></div>
+</section>
+<section class="events-section" id="events">
+ <div class="section-title"><div><h2><span class="bolt">ϟ</span> Upcoming Events</h2><p>Explore and register for events happening soon.</p></div><a href="#events" class="view-all">View All&nbsp; →</a></div>
+ <div class="toolbar">
+  <label class="search"><span>⌕</span><input id="search" placeholder="Search events..." aria-label="Search events"></label>
+  <div class="filters" id="categories">
+   <button class="filter active" data-filter="All">▦ &nbsp;All Events</button><button class="filter" data-filter="Tech">&lt;/&gt; &nbsp;Tech</button><button class="filter" data-filter="Cultural">♧ &nbsp;Cultural</button><button class="filter" data-filter="Sports">♜ &nbsp;Sports</button><button class="filter" data-filter="Workshop">▱ &nbsp;Workshops</button><button class="filter" data-filter="Others">••• &nbsp;Others</button>
+  </div>
+ </div>
+ <div class="count-row"><span id="count">SHOWING 8 EVENTS</span><span>CURATED FOR YOUR NEXT GREAT MOMENT ✦</span></div>
+ <div class="event-grid" id="eventGrid"></div>
+ <div class="empty" id="empty" hidden>No events found. Try another search or category.</div>
+</section>
+<section class="my-bookings-section" id="bookings">
+  <div class="section-title">
+    <div><h2><span class="bolt">✦</span> My Bookings</h2><p>Your registered events, all in one place.</p></div>
+    <span class="booking-account-note" id="bookingAccountNote">Sign in to view your bookings</span>
+  </div>
+  <div id="myBookingsList" class="my-bookings-list">
+    <div class="bookings-empty">Sign in to your ADORA account to see your event registrations.</div>
+  </div>
+</section>
+<section class="booking-strip"><div><span class="eyebrow">YOUR NEXT MEMORY STARTS HERE</span><h2>Show up for something <span>amazing.</span></h2></div><a class="btn primary" href="#events">Find an event <span>➜</span></a></section>
+</main>
+<footer class="site-footer">
+ <div class="footer-grid">
+  <div class="footer-brand-column">
+   <a class="logo footer-logo" href="#home" aria-label="ADORA home">
+    <svg class="logo-clover" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+     <g class="clover-leaves">
+      <path d="M31.8 31.5 C25.5 28.5 17.5 26.5 17.5 17.5 C17.5 8.5 28.5 7.5 32 18.5 C35.5 7.5 46.5 8.5 46.5 17.5 C46.5 26.5 38.5 28.5 32.2 31.5"/>
+      <path d="M32.5 31.8 C35.5 25.5 37.5 17.5 46.5 17.5 C55.5 17.5 56.5 28.5 45.5 32 C56.5 35.5 55.5 46.5 46.5 46.5 C37.5 46.5 35.5 38.5 32.5 32.2"/>
+      <path d="M32.2 32.5 C38.5 35.5 46.5 37.5 46.5 46.5 C46.5 55.5 35.5 56.5 32 45.5 C28.5 56.5 17.5 55.5 17.5 46.5 C17.5 37.5 25.5 35.5 31.5 32.5"/>
+      <path d="M31.5 32.2 C28.5 38.5 26.5 46.5 17.5 46.5 C8.5 46.5 7.5 35.5 18.5 32 C7.5 28.5 8.5 17.5 17.5 17.5 C26.5 17.5 28.5 25.5 31.5 31.5"/>
+     </g><path class="clover-stem" d="M33 34 C34 42 38 49 45 55"/>
+    </svg><span>ADORA</span>
+   </a>
+   <p>ADORA is your platform for discovering, organizing, and experiencing exciting events. Find your next great moment with us.</p>
+   <div class="footer-socials" aria-label="Social media links">
+    <a href="https://www.linkedin.com/in/adrija-mukhopadhyay-3a9860321/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">in</a>
+    <a href="https://www.instagram.com/_.adrija.xoxo._/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">◎</a>
+    <a href="https://github.com/adrijamukhopadhyay" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GH</a>
+   </div>
+  </div>
+  <div class="footer-column"><h3>Quick Links</h3><a href="#home">Home</a><a href="#events">Explore Events</a><a href="#bookings">My Bookings</a><a href="#events">Event Categories</a><a href="#events">Host an Event</a></div>
+  <div class="footer-column"><h3>Top Categories</h3><a href="#events" data-footer-filter="Tech">Technology &amp; AI</a><a href="#events" data-footer-filter="Cultural">Live Music &amp; Culture</a><a href="#events" data-footer-filter="Others">Business &amp; Startups</a><a href="#events" data-footer-filter="Sports">Sports Events</a><a href="#events" data-footer-filter="Workshop">Hands-on Workshops</a></div>
+  <div class="footer-column footer-newsletter"><h3>Stay Updated</h3><p>Get updates about upcoming events and exciting experiences.</p><form id="footerNewsletter"><label class="sr-only" for="footerEmail">Your email address</label><div class="newsletter-form"><input id="footerEmail" type="email" placeholder="Enter your email..." required><button type="submit" aria-label="Subscribe">➤</button></div></form><small id="newsletterNote">No spam. Just event updates.</small></div>
+ </div>
+ <div class="footer-bottom"><span>© 2026 ADORA. All rights reserved.</span><span>DISCOVER · REGISTER · EXPERIENCE</span></div>
+</footer>
+
+<div class="modal-backdrop" id="eventModal" aria-hidden="true"><section class="modal"><button class="close" data-close>×</button><div id="eventDetails"></div></section></div>
+<div class="modal-backdrop" id="registerModal" aria-hidden="true"><section class="modal register-modal"><button class="close" data-close>×</button><div class="eyebrow">ADORA · EVENT REGISTRATION</div><h2>Save your <span>spot.</span></h2><p id="registerEvent"></p><p class="form-hint">Fill in your details below. We’ll validate your information before confirming your spot.</p>
+<form id="registerForm" novalidate><input type="hidden" id="eventId"><label>Selected event<input id="selectedEventName" type="text" readonly></label><label>Full name<input id="name" required placeholder="Your full name"></label><label>Email address<input id="email" type="email" required placeholder="you@example.com"></label><label>Phone number<input id="phone" type="tel" required placeholder="10-digit mobile number"></label><label class="check"><input type="checkbox" id="consent"> I agree to receive registration updates.</label><p class="error" id="error" role="alert"></p><button class="btn primary submit" type="submit">Confirm Registration&nbsp; ➜</button></form><div id="success" class="success" hidden><div>✓</div><h3>You're on the list!</h3><p id="successText"></p><button class="btn secondary" data-close>Back to events</button></div><small class="disclaimer">ACADEMIC DEMO · REGISTRATIONS ARE STORED IN THIS BROWSER ONLY.</small></section></div>
+<div class="toast" id="toast" role="status"></div>
+
+<div class="modal-backdrop auth-backdrop" id="authModal" aria-hidden="true">
+ <section class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <button class="close" type="button" data-auth-close aria-label="Close login dialog">×</button>
+  <div class="auth-brand">
+   <svg class="auth-clover-svg" viewBox="0 0 64 64" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M32 31 C24 28 16 25 16 16 C16 8 27 7 32 19 C37 7 48 8 48 16 C48 25 40 28 32 31Z"/>
+     <path d="M33 32 C36 24 39 16 48 16 C56 16 57 27 45 32 C57 37 56 48 48 48 C39 48 36 40 33 32Z"/>
+     <path d="M32 33 C40 36 48 39 48 48 C48 56 37 57 32 45 C27 57 16 56 16 48 C16 39 24 36 32 33Z"/>
+     <path d="M31 32 C28 40 25 48 16 48 C8 48 7 37 19 32 C7 27 8 16 16 16 C25 16 28 24 31 32Z"/>
+     <path d="M33 35 C34 43 38 50 45 56"/>
+    </g>
+   </svg>
+   <span>ADORA</span>
+  </div>
+  <div class="eyebrow">YOUR EVENT JOURNEY STARTS HERE</div>
+  <h2 id="authTitle">Welcome <span>to ADORA.</span></h2>
+  <p class="auth-intro">Log in to manage your registrations, or create an account to save your next experience.</p>
+  <div class="auth-tabs" role="tablist" aria-label="Account options">
+   <button type="button" class="auth-tab active" data-auth-mode="signin" role="tab" aria-selected="true">Login</button>
+   <button type="button" class="auth-tab" data-auth-mode="signup" role="tab" aria-selected="false">Sign Up</button>
+  </div>
+  <button type="button" class="google-auth" id="googleAuth"><span class="google-g">G</span> Continue with Google</button>
+  <div class="auth-divider"><span>OR CONTINUE WITH EMAIL</span></div>
+  <form id="authForm" novalidate>
+   <label id="authNameLabel" hidden>Full name<input id="authName" type="text" autocomplete="name" placeholder="Your full name"></label>
+   <label>Email address<input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+   <label>Password<input id="authPassword" type="password" autocomplete="current-password" placeholder="At least 6 characters" required minlength="6"></label>
+   <label id="authConfirmLabel" hidden>Confirm password<input id="authConfirmPassword" type="password" autocomplete="new-password" placeholder="Re-enter your password"></label>
+   <p class="auth-error" id="authError" role="alert" aria-live="polite"></p>
+   <button class="btn primary auth-submit" id="authSubmit" type="submit">Login&nbsp; →</button>
+  </form>
+  <p class="auth-terms">Your account is securely managed by Firebase Authentication.</p>
+ </section>
+</div>
+
+<script src="script.js"></script>
+<script type="module" src="auth.js"></script>
+</body></html>

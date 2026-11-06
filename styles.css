@@ -1,0 +1,370 @@
+*{box-sizing:border-box} :root{--bg:#070817;--panel:#0d1225;--panel2:#121a32;--text:#f5f7ff;--muted:#aab3cc;--border:rgba(139,157,220,.2);--cyan:#51f4f0;--purple:#9b62ff;--pink:#ef63e8;--glow:rgba(75,235,239,.23)}body{margin:0;background:radial-gradient(ellipse at 76% 18%,#16113b 0,transparent 34%),radial-gradient(ellipse at 10% 4%,#24123d 0,transparent 25%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}html{scroll-behavior:smooth;scroll-padding-top:90px}a{color:inherit;text-decoration:none}button,input{font:inherit}.topbar{height:70px;padding:0 8%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(7,8,23,.8);backdrop-filter:blur(18px);position:sticky;top:0;z-index:10}.logo{font:700 21px "Space Grotesk";letter-spacing:-1px;display:flex;gap:2px;align-items:center}.logo>span:last-child{color:var(--cyan)}.logo-clover{width:31px;height:31px;margin-right:8px;fill:none;stroke:#ff79d1;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 7px #ff79d177);transition:filter .25s,transform .35s}.logo:hover .logo-clover{filter:drop-shadow(0 0 12px #ff79d1);transform:rotate(12deg)}.topbar nav{display:flex;gap:46px;font-size:14px;color:#c4c9dc}.topbar nav a{padding:25px 0;position:relative}.topbar nav a:hover,.topbar nav a.active{color:var(--cyan);text-shadow:0 0 15px var(--cyan)}.topbar nav a.active:after{content:"";position:absolute;bottom:12px;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--purple));box-shadow:0 0 12px var(--cyan)}.top-actions{display:flex;gap:24px;align-items:center}.theme-toggle,.menu-toggle{border:1px solid var(--border);background:transparent;color:white;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px}.sign-in{padding:10px 24px;border:1px solid var(--cyan);border-radius:12px;background:transparent;color:white;box-shadow:0 0 16px #46dff033,inset 0 0 12px #46dff01c;cursor:pointer}.menu-toggle{display:none}.hero{min-height:390px;padding:48px 8% 24px;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative;overflow:hidden}.hero-copy{position:relative;z-index:2}.eyebrow{font:600 11px "Space Grotesk";letter-spacing:3px;color:#aab5d6}.eyebrow b{color:var(--cyan);padding:0 9px}.hero h1{font:700 clamp(42px,4.2vw,64px)/1.06 "Space Grotesk";letter-spacing:-2.5px;margin:22px 0 16px}.hero h1 span,.booking-strip h2 span,.modal h2 span{background:linear-gradient(100deg,#b9faff,#b66bff 65%,#f46be7);color:transparent;background-clip:text}.hero-copy>p{font-size:17px;line-height:1.65;color:#b7bfd5;max-width:590px}.hero-buttons{display:flex;gap:18px;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:26px;padding:14px 22px;border-radius:28px;font-size:14px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:.25s}.btn.primary{background:linear-gradient(105deg,#4df2f1,#a36cff 75%,#ee72df);color:#090b1b;box-shadow:0 0 25px #52eff080,0 0 45px #a66bff35}.btn.secondary{background:rgba(9,12,30,.65);border-color:#7770bb;color:#f4f5ff}.btn:hover{transform:translateY(-3px);filter:brightness(1.15);box-shadow:0 0 30px #68e9f07a}.hero-visual{height:340px;position:relative;display:grid;place-items:center;perspective:900px}.visual-orbit{position:absolute;border:1px solid rgba(65,237,239,.3);border-radius:50%;width:450px;height:190px;transform:rotate(-15deg);filter:drop-shadow(0 0 8px #40e9ed)}.orbit2{width:510px;height:230px;transform:rotate(22deg);border-color:#a35bff66}.orbit3{width:380px;height:270px;transform:rotate(70deg);border-color:#e55bdf55}.holo-panel{position:absolute;width:135px;height:190px;border:1px solid #a36bff;border-radius:15px;background:linear-gradient(145deg,#522b9d99,#10182bdf 65%);box-shadow:0 0 28px #963fff66,inset 0 0 30px #a44cff22;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;transform:rotateY(-17deg) rotateZ(-5deg);backdrop-filter:blur(5px)}.holo-panel span{font:600 42px "Space Grotesk";color:#b68cff;text-shadow:0 0 22px #9c55ff}.holo-panel small{font:9px "Space Grotesk";letter-spacing:2px;color:#c9d6ff}.panel-game{left:10%;width:110px;height:160px;transform:rotateY(20deg) rotateZ(-8deg);border-color:#47dce8}.panel-code{right:5%;width:130px;height:180px;transform:rotateY(-23deg) rotateZ(5deg);border-color:#51e5ec}.panel-code span{color:#54e8ed}.panel-concert{z-index:2;width:185px;height:245px;transform:rotateY(-7deg) rotateZ(-2deg);background:linear-gradient(160deg,#8d37d566,#14122deF 65%),url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80") center/cover;box-shadow:0 0 35px #b34dff88}.concert-art{font-size:76px;color:#fff;text-shadow:0 0 25px #ef63e8}.spark{position:absolute;color:var(--cyan);font-size:25px;text-shadow:0 0 15px var(--cyan)}.s1{top:9%;left:25%}.s2{right:13%;bottom:14%;color:#da69ff}.wave{position:absolute;bottom:-22px;left:-4%;width:108%;height:75px;opacity:.5;background:radial-gradient(ellipse at 50% 0%,transparent 40%,#a43cff44 41%,transparent 42%),repeating-linear-gradient(170deg,transparent 0 8px,#873fff22 9px,transparent 10px);filter:drop-shadow(0 0 10px #a342ff);pointer-events:none}.events-section{padding:30px 7.5% 75px;position:relative}.section-title{display:flex;align-items:center;justify-content:space-between}.section-title h2{font:700 30px "Space Grotesk";margin:0 0 3px;letter-spacing:-.8px}.bolt{color:var(--cyan);font-size:34px;margin-right:12px;text-shadow:0 0 15px var(--cyan)}.section-title p{margin:0 0 0 46px;color:var(--muted);font-size:15px}.view-all{color:#ed79ed;font-size:14px;font-weight:700}.toolbar{display:flex;gap:26px;align-items:center;margin:23px 0 20px}.search{height:46px;flex:0 1 480px;border:1px solid #535c8b;border-radius:15px;display:flex;align-items:center;padding:0 18px;gap:14px;background:#0c1022}.search span{font-size:25px;color:#aab9d8}.search input{background:none;border:0;outline:0;color:white;width:100%;font-size:14px}.filters{display:flex;gap:12px;flex-wrap:wrap}.filter{border:1px solid var(--border);border-radius:25px;padding:12px 17px;background:#0c1022;color:#e7eaf8;white-space:nowrap;font-size:12px;cursor:pointer;transition:.2s}.filter:hover,.filter.active{background:linear-gradient(100deg,#4be9eb,#bd70ff);color:#0a0b1a;border-color:transparent;box-shadow:0 0 20px #64e8f055}.count-row{display:flex;justify-content:space-between;color:#8e9bbd;font:9px "Space Grotesk";letter-spacing:1.5px;margin:15px 0}.event-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}.event-card{border:1px solid #365a91;border-radius:17px;overflow:hidden;background:linear-gradient(145deg,#10172d,#0a0e20);position:relative;transition:transform .3s,border-color .3s,box-shadow .3s;cursor:pointer}.event-card:nth-child(4n+1){border-color:#26d9e4}.event-card:nth-child(4n+2){border-color:#a14ce4}.event-card:nth-child(4n+3){border-color:#8b5ae9}.event-card:hover{transform:translateY(-7px);box-shadow:0 0 25px #50e9f044,0 15px 35px #03040c;border-color:#ff79d1}.event-image{height:112px;position:relative;overflow:hidden}.event-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:saturate(1.1)}.event-card:hover img{transform:scale(1.08)}.tag{position:absolute;bottom:9px;left:13px;padding:5px 12px;background:#080c20e8;border:1px solid #54e8ef;border-radius:20px;color:#8af8fa;font-size:11px}.event-content{padding:12px 15px 14px}.event-content h3{font:700 17px "Space Grotesk";margin:0 0 10px}.event-meta{display:flex;justify-content:space-between;gap:7px;color:#b4c0dc;font-size:11px;margin:7px 0}.event-meta span:first-child{white-space:nowrap}.event-content p{font-size:12px;color:#b5bed4;line-height:1.55;min-height:38px;margin:12px 0 2px}.card-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #ffffff16;margin-top:12px;padding-top:10px;color:#7deef0;font-size:10px;letter-spacing:1px}.arrow{width:34px;height:34px;border:1px solid #b66bff;border-radius:50%;display:grid;place-items:center;font-size:19px;color:#fff;box-shadow:0 0 12px #9e5bff66}.empty{text-align:center;color:var(--muted);padding:45px}.booking-strip{margin:10px 7.5% 70px;padding:30px 36px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(100deg,#10182d,#20123c);display:flex;justify-content:space-between;align-items:center}.booking-strip h2{font:700 27px "Space Grotesk";margin:10px 0 0}footer{padding:25px 8%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;color:#8c98b7;font-size:10px;letter-spacing:1px}.modal-backdrop{display:none;position:fixed;inset:0;background:#02030bd9;backdrop-filter:blur(10px);z-index:40;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{position:relative;width:min(560px,100%);max-height:90vh;overflow:auto;background:#0e1428;border:1px solid #6558a8;border-radius:20px;padding:30px;box-shadow:0 0 45px #6e43c555}.close{position:absolute;right:15px;top:10px;border:0;background:none;color:white;font-size:30px;cursor:pointer}.modal h2{font:700 32px "Space Grotesk";margin:10px 0}.modal p{color:#aeb9d1;line-height:1.6;font-size:13px}.detail-image{height:190px;margin:-30px -30px 24px}.detail-image img{width:100%;height:100%;object-fit:cover}.detail-info{display:grid;gap:10px;padding:14px 0;border-block:1px solid var(--border);color:#c3cce0;font-size:12px}.modal-actions{display:flex;justify-content:space-between;align-items:center;margin-top:20px}.register-modal{width:min(470px,100%)}.register-modal form{display:grid;gap:13px}.register-modal label{display:grid;gap:7px;color:#b7c2dc;font-size:12px}.register-modal input:not([type=checkbox]){background:#080d1e;border:1px solid #414c78;border-radius:9px;padding:12px;color:white;outline:none}.register-modal input:focus{border-color:var(--cyan)}.register-modal .check{display:flex;align-items:center;gap:9px}.register-modal .check input{accent-color:#6de9eb}.error{color:#ff8b9b!important;min-height:15px;margin:0}.submit{width:100%}.disclaimer{display:block;text-align:center;color:#7683a3;font-size:9px;letter-spacing:1px;margin-top:17px}.success{text-align:center;padding:25px}.success>div{width:55px;height:55px;border-radius:50%;background:var(--cyan);color:#07101a;display:grid;place-items:center;font-size:30px;margin:auto}.success h3{font:700 24px "Space Grotesk"}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#5af0ed;color:#07101a;padding:12px 20px;border-radius:20px;z-index:60;font-size:12px;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1100px){.topbar{padding:0 5%}.hero{padding-inline:5%}.events-section{padding-inline:5%}.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.toolbar{align-items:flex-start;flex-direction:column}.search{flex:auto;width:100%}.filters{gap:8px}}
+@media(max-width:700px){.topbar{height:64px;padding:0 5%}.topbar nav{display:none;position:absolute;top:64px;left:0;right:0;background:#0b1023;padding:18px 7%;flex-direction:column;gap:15px}.topbar nav.show{display:flex}.topbar nav a{padding:5px}.topbar nav a.active:after{display:none}.top-actions{gap:10px}.menu-toggle{display:block}.sign-in{padding:8px 14px}.hero{display:flex;flex-direction:column;align-items:stretch;padding:55px 6% 5px}.hero h1{font-size:clamp(39px,10vw,58px)}.hero-copy>p{font-size:14px}.hero-visual{height:270px;transform:scale(.82);margin:-4px 0}.panel-game{left:5%}.panel-code{right:2%}.visual-orbit{width:360px}.events-section{padding:28px 5% 55px}.section-title h2{font-size:24px}.section-title p{font-size:12px;margin-left:38px}.view-all{font-size:12px}.event-grid{grid-template-columns:1fr;gap:15px}.event-image{height:155px}.event-content p{min-height:0}.filters{overflow-x:auto;flex-wrap:nowrap;width:100%;padding-bottom:6px}.filter{font-size:11px}.count-row{font-size:8px;gap:10px}.booking-strip{margin:0 5% 45px;padding:22px;gap:18px;align-items:flex-start;flex-direction:column}.booking-strip h2{font-size:23px}footer{padding:22px 5%;gap:12px;flex-wrap:wrap}footer>span:nth-child(2){display:none}.cursor-glow{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Slow-moving star / particle background */
+#starfield{
+ position:fixed;inset:0;width:100%;height:100%;
+ pointer-events:none;z-index:0;opacity:.78;
+}
+
+body>.cursor-glow{position:fixed;z-index:8}
+@media(max-width:700px){#starfield{opacity:.48}}
+@media(prefers-reduced-motion:reduce){#starfield{display:none}}
+
+
+/* ADORA reference-match refinements */
+.logo{gap:3px}
+.logo-clover{stroke:#ff83d7;stroke-width:2.3;filter:drop-shadow(0 0 8px #ff5fc988)}
+.logo:hover .logo-clover{filter:drop-shadow(0 0 13px #ff5fc9)}
+.topbar{padding-inline:8%;height:72px}
+.topbar nav{gap:42px}
+.topbar nav a.active,.topbar nav a:hover{color:#ff8bd9;text-shadow:0 0 15px #ff63c9}
+.topbar nav a.active:after{background:linear-gradient(90deg,#ff67cb,#9b68ff);box-shadow:0 0 13px #ff67cb}
+.sign-in{border-color:#ff79d1;box-shadow:0 0 16px #ff69c533,inset 0 0 12px #ff69c51c}
+.hero{min-height:510px;padding:68px 8% 120px;background:radial-gradient(ellipse at 70% 40%,rgba(90,38,139,.18),transparent 42%)}
+.hero h1{font-size:clamp(42px,4.4vw,65px);line-height:1.02;letter-spacing:-2.8px}
+.hero h1 span{background:linear-gradient(100deg,#ff8edc,#d46cff 62%,#ff62c8);color:transparent;background-clip:text}
+.hero-copy>p{max-width:590px;font-size:16px}
+.btn.primary{background:linear-gradient(100deg,#ff76cf,#d46cff);color:#17091d;box-shadow:0 0 24px #ff65c977}
+.btn.primary:hover{box-shadow:0 0 32px #ff65c9aa}
+.btn.secondary{border-color:#a56cba}
+.hero-visual{height:390px}
+.panel-concert{border-color:#ff73d2;box-shadow:0 0 36px #ff4ec588}
+.panel-game{border-color:#b35cff}
+.panel-code{border-color:#5be9ff}
+.wave{display:none}
+.wave-svg{position:absolute;left:0;bottom:-2px;width:100%;height:150px;overflow:visible;pointer-events:none;z-index:1;opacity:.95}
+.wave-svg path{fill:none;stroke-linecap:round}
+.wave-halo{stroke:url(#wavePink);stroke-width:18;opacity:.38;filter:url(#waveGlow)}
+.wave-line{stroke:url(#wavePink);stroke-width:2.4;filter:drop-shadow(0 0 7px #ff55ce)}
+.wave-line-two{stroke-width:1.2;opacity:.55;filter:drop-shadow(0 0 5px #9b5cff)}
+.events-section{padding:22px 7.5% 76px;background:linear-gradient(180deg,rgba(8,7,25,.15),rgba(8,7,25,.45))}
+.section-title h2{font-size:31px}
+.bolt{color:#ff72d1;text-shadow:0 0 15px #ff4fc8}
+.view-all{color:#ff83dc}
+.toolbar{display:flex;gap:20px;align-items:center;margin:24px 0 20px}
+.search{flex:1 1 300px;max-width:470px;border-color:#51466f}
+.filters{flex:1;display:flex;gap:9px;flex-wrap:nowrap;overflow-x:auto;padding:3px 2px 8px}
+.filter{padding:11px 13px;font-size:11px;border-color:#39304f;background:rgba(12,11,30,.82)}
+.filter:hover,.filter.active{background:linear-gradient(100deg,#ff79d4,#c26aff);color:#19091c;box-shadow:0 0 20px #ff66c955}
+.event-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.event-card{border-radius:13px;background:linear-gradient(145deg,#111027,#090b1c);border-color:#70438c}
+.event-card:nth-child(4n+1),.event-card:nth-child(4n+2),.event-card:nth-child(4n+3){border-color:#754b91}
+.event-card:hover{border-color:#ff77d2;box-shadow:0 0 25px #ff5ac844,0 15px 35px #03040c}
+.event-image{height:132px}
+.tag{border-color:#ff75d2;color:#ff9cde;background:#140b20e8}
+.card-bottom{color:#ff8cda}
+.arrow{border-color:#ff79d1;box-shadow:0 0 12px #ff67c944}
+.booking-strip{background:linear-gradient(100deg,#160f2c,#241039);border-color:#6e397b}
+.booking-strip h2 span{background:linear-gradient(100deg,#ff8edc,#c56bff);color:transparent;background-clip:text}
+footer .logo>span:last-child{color:#ff83d7}
+
+/* Soft neon-pink mouse spotlight. No cursor dot is drawn. */
+.cursor-glow{
+ position:fixed;inset:0;pointer-events:none;z-index:8;
+ background:radial-gradient(500px circle at var(--mx,50%) var(--my,50%),
+ rgba(255,105,205,.24) 0%,
+ rgba(238,82,195,.14) 24%,
+ rgba(161,81,255,.075) 45%,
+ rgba(161,81,255,.025) 62%,
+ transparent 76%);
+ mix-blend-mode:screen;
+ opacity:1;
+ transition:background .08s linear;
+}
+@media(max-width:1100px){
+ .topbar{padding-inline:5%}
+ .hero{padding-inline:5%}
+ .events-section{padding-inline:5%}
+ .toolbar{align-items:flex-start;flex-direction:column}
+ .search{flex:auto;width:100%;max-width:none}
+ .filters{width:100%}
+ .event-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .event-image{height:105px}
+}
+@media(max-width:820px){
+ .event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hero{min-height:480px}
+ .hero-visual{transform:scale(.88)}
+}
+@media(max-width:700px){
+ .hero{padding:48px 6% 105px}
+ .hero-visual{height:270px;transform:scale(.82);margin:-4px 0}
+ .events-section{padding:28px 5% 55px}
+ .event-grid{grid-template-columns:1fr}
+ .event-image{height:155px}
+ .filters{overflow-x:auto;flex-wrap:nowrap}
+ .cursor-glow{display:none}
+ .wave-svg{height:105px}
+}
+
+/* Interaction layer fixes */
+.topbar{z-index:10}
+.modal-backdrop{z-index:100}
+.modal{position:relative;z-index:101}
+.form-hint{font-size:12px!important;color:#ffb5e5!important;margin-top:-5px}
+.register-modal label input[readonly]{color:#ffb6e7!important;border-color:#a64f91!important;background:#170d25!important}
+.detail-description{font-size:14px!important;line-height:1.75!important}
+.detail-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.detail-highlight{border:1px solid #54365f;background:#140e25;border-radius:10px;padding:12px;color:#d8cce8;font-size:12px}
+.detail-highlight strong{display:block;color:#ff9cdd;font-size:10px;letter-spacing:1px;margin-bottom:5px}
+.modal-actions .btn{white-space:nowrap}
+@media(max-width:560px){.detail-highlights{grid-template-columns:1fr}.modal{padding:22px}.detail-image{margin:-22px -22px 20px}}
+
+
+/* ── ADORA lavender light theme ───────────────────────────────── */
+body.light{
+ --bg:#f1edff;--panel:#fffaff;--panel2:#e9e0ff;--text:#211a38;--muted:#766b91;
+ --border:rgba(130,99,184,.22);
+ background:
+  radial-gradient(ellipse at 76% 18%,rgba(204,177,255,.46),transparent 36%),
+  radial-gradient(ellipse at 12% 8%,rgba(255,195,239,.38),transparent 30%),
+  linear-gradient(135deg,#f6f2ff 0%,#eee8ff 52%,#f9efff 100%);
+ color:#211a38;
+}
+body.light .topbar{background:rgba(250,247,255,.88);border-bottom-color:#ded2f3}
+body.light .topbar nav{color:#665a80}
+body.light .topbar nav a.active,body.light .topbar nav a:hover{color:#d84cb2;text-shadow:0 0 12px #f4a7df66}
+body.light .topbar nav a.active:after{background:linear-gradient(90deg,#f45dc6,#a77aff);box-shadow:0 0 12px #d76cda77}
+body.light .logo{color:#251b3d}
+body.light .theme-toggle,body.light .menu-toggle{color:#392b58;border-color:#d9c9f3;background:#ffffff88}
+body.light .sign-in{color:#8e3b9d;border-color:#e77bd2;background:#fff9ff;box-shadow:0 0 18px #eaa2e255}
+body.light .hero{background:radial-gradient(ellipse at 70% 40%,rgba(198,164,255,.3),transparent 44%)}
+body.light .hero-copy>p{color:#756c91}
+body.light .eyebrow{color:#8376a6}
+body.light .hero h1{color:#211a38}
+body.light .hero h1 span,body.light .booking-strip h2 span{background:linear-gradient(100deg,#e65bc4,#a36af0 65%,#e56bc8);color:transparent;background-clip:text}
+body.light .btn.secondary{background:#ffffffaa;color:#4e416b;border-color:#c9b5e9}
+body.light .section-title h2{color:#241c3b}
+body.light .section-title p{color:#82769d}
+body.light .search{background:#ffffffc9;border-color:#d4c4ed}
+body.light .search input{color:#302448}
+body.light .search input::placeholder{color:#9a8eb0}
+body.light .filter{background:#ffffffb8;color:#594b76;border-color:#d9cbed}
+body.light .filter.active,body.light .filter:hover{background:linear-gradient(100deg,#f58bd7,#c19bff);color:#321a48;border-color:transparent}
+body.light .count-row{color:#9183ac}
+body.light .event-card{background:linear-gradient(145deg,#fffaff,#f2eaff);border-color:#d5b7ed;box-shadow:0 8px 25px #8263aa12}
+body.light .event-card:hover{border-color:#e66acb;box-shadow:0 0 24px #df86d744,0 15px 30px #70528a18}
+body.light .event-content h3{color:#302044}
+body.light .event-content p,body.light .event-meta{color:#76698e}
+body.light .tag{background:#fff5ff;color:#bd4caa;border-color:#eaa0dc}
+body.light .card-bottom{color:#bf55ad;border-color:#e8d8f3}
+body.light .arrow{color:#a744aa;border-color:#d78bdb;box-shadow:0 0 10px #d78bdb44}
+body.light .booking-strip{background:linear-gradient(110deg,#eee4ff,#fbe9f8);border-color:#d9c4ef}
+body.light footer{color:#817497;border-color:#e1d5f0}
+body.light .modal{background:linear-gradient(145deg,#fffaff,#f0e9ff);color:#2a2040;border-color:#d8b8ef;box-shadow:0 18px 70px #72539a33}
+body.light .modal p,body.light .detail-info{color:#76698e}
+body.light .close{color:#49345f}
+body.light .register-modal input:not([type=checkbox]),body.light .auth-modal input{background:#fff;border-color:#d9c8eb;color:#2c2043}
+body.light .cursor-glow{opacity:.8}
+body.light #starfield{opacity:.45}
+
+/* Wide, rounded four-leaf clover mark */
+.logo-clover{width:39px;height:39px;margin-right:9px;overflow:visible;stroke:#ff79d1;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;fill:none;filter:drop-shadow(0 0 7px #ff79d177)}
+.logo:hover .logo-clover{filter:drop-shadow(0 0 13px #ff79d1);transform:rotate(8deg)}
+body.light .logo-clover{stroke:#e85bbd;filter:drop-shadow(0 0 6px #e85bbd55)}
+
+/* Account dialog */
+.auth-modal{width:min(470px,100%);padding:32px}
+.auth-brand{display:flex;align-items:center;gap:9px;font:700 20px "Space Grotesk";margin-bottom:22px;color:var(--text)}
+.auth-clover{font-size:29px;line-height:1;color:#f278cf;text-shadow:0 0 12px #f278cf88}
+.auth-modal h2{margin:10px 0 5px;font-size:34px}
+.auth-intro{margin:0 0 18px}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;padding:4px;background:#17142a;border:1px solid var(--border);border-radius:12px;margin:18px 0 13px}
+.auth-tab{border:0;background:transparent;color:#aeb6ce;padding:10px;border-radius:9px;cursor:pointer;font-weight:700}
+.auth-tab.active{background:linear-gradient(100deg,#ff83d5,#bd82ff);color:#24102f;box-shadow:0 0 14px #ed7ac955}
+.google-auth{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;padding:12px;border-radius:10px;border:1px solid #6d628c;background:#ffffff0b;color:var(--text);font-weight:700;cursor:pointer}
+.google-auth:hover{border-color:#ed82d4;box-shadow:0 0 16px #ed82d433}
+.google-g{font:700 20px Arial;color:#4285f4;background:#fff;border-radius:50%;width:25px;height:25px;display:grid;place-items:center}
+.auth-divider{display:flex;align-items:center;gap:12px;color:#9186a8;font-size:9px;letter-spacing:1.5px;margin:18px 0}
+.auth-divider:before,.auth-divider:after{content:"";height:1px;background:var(--border);flex:1}
+.auth-modal form{display:grid;gap:12px}
+.auth-modal form label{display:grid;gap:6px;color:#b9b0cf;font-size:12px}
+.auth-modal input{width:100%;padding:12px;border-radius:9px;border:1px solid #55476f;background:#090d20;color:white;outline:none}
+.auth-modal input:focus{border-color:#f17bcf;box-shadow:0 0 0 3px #f17bcf22}
+.auth-modal input[hidden],.auth-modal label[hidden]{display:none}
+.auth-error{min-height:14px;margin:0;color:#ff8cae!important;font-size:12px}
+.auth-submit{width:100%;margin-top:2px}
+.auth-terms{text-align:center;font-size:10px!important;color:#958ba9!important;margin:15px 0 0!important}
+body.light .auth-tabs{background:#e8def7}
+body.light .auth-tab{color:#74658d}
+body.light .auth-tab.active{color:#321a48}
+body.light .google-auth{color:#44345d;background:#fff;border-color:#dac8ec}
+body.light .auth-modal form label{color:#75668e}
+body.light .auth-modal input{background:#fff;color:#2c2043;border-color:#d9c8eb}
+body.light .auth-terms{color:#897b9f!important}
+@media(max-width:700px){.auth-modal{padding:25px 20px}.logo-clover{width:36px;height:36px}}
+
+
+/* Light-mode cursor spotlight: deeper rose/lilac contrast on the pale lavender canvas.
+   Dark-mode cursor colours are intentionally unchanged. */
+body.light .cursor-glow{
+  opacity:1;
+  mix-blend-mode:multiply;
+  background:radial-gradient(560px circle at var(--mx,50%) var(--my,50%),
+    rgba(190,48,143,.30) 0%,
+    rgba(157,65,180,.19) 27%,
+    rgba(116,77,177,.10) 48%,
+    transparent 72%);
+}
+
+/* Rebalanced clover proportions: broader lobes, visible four-way silhouette,
+   and a longer curved stem so the mark reads as a clover rather than a flat flower. */
+.logo-clover{
+  width:43px;
+  height:43px;
+  flex:0 0 43px;
+  margin-right:9px;
+  overflow:visible;
+  fill:none;
+  stroke:#ff79d1;
+  stroke-width:2.15;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  filter:drop-shadow(0 0 7px #ff79d177);
+  transition:transform .3s ease,filter .3s ease;
+}
+.logo:hover .logo-clover{
+  transform:rotate(7deg) scale(1.04);
+  filter:drop-shadow(0 0 13px #ff79d1);
+}
+.logo-clover .clover-leaves path{vector-effect:non-scaling-stroke}
+.logo-clover .clover-stem{stroke-width:2.3}
+.auth-clover-svg{
+  width:34px;height:34px;flex:0 0 34px;
+  fill:none;stroke:#f278cf;stroke-width:2.3;
+  stroke-linecap:round;stroke-linejoin:round;
+  filter:drop-shadow(0 0 7px #f278cf77);
+}
+body.light .logo-clover{stroke:#d94da9;filter:drop-shadow(0 0 6px #d94da955)}
+body.light .auth-clover-svg{stroke:#d94da9}
+@media(max-width:700px){.logo-clover{width:39px;height:39px;flex-basis:39px}}
+
+
+/* Clover mark refined to match the user's reference: four separate heart-like leaves. */
+.logo-clover{
+  display:block;
+  width:46px;
+  height:46px;
+  flex:0 0 46px;
+  margin-right:10px;
+  overflow:visible;
+  fill:none;
+  stroke:#ff78d0;
+  stroke-width:2.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  filter:drop-shadow(0 0 7px #ff62c988);
+  transition:transform .28s ease,filter .28s ease;
+}
+.logo-clover .clover-leaves path{fill:none}
+.logo-clover .clover-stem{fill:none;stroke-width:2.5}
+.logo:hover .logo-clover{
+  transform:rotate(7deg) scale(1.04);
+  filter:drop-shadow(0 0 13px #ff62c9);
+}
+body.light .logo-clover{
+  stroke:#d94da9;
+  filter:drop-shadow(0 0 7px #d94da966);
+}
+.auth-clover-svg{
+  width:36px;
+  height:36px;
+  fill:none;
+  stroke:#f278cf;
+  stroke-width:2.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+@media(max-width:700px){
+  .logo-clover{width:42px;height:42px;flex-basis:42px}
+}
+
+
+/* ADORA login / sign-up dialog */
+.auth-backdrop{z-index:80}
+.auth-modal{width:min(470px,100%);padding:32px}
+.auth-brand{display:flex;align-items:center;gap:10px;font:700 21px "Space Grotesk";margin-bottom:18px}
+.auth-clover-svg{width:38px;height:38px;flex:0 0 38px;color:#ff79d1;filter:drop-shadow(0 0 7px #ff79d177)}
+.auth-modal h2{font:700 32px "Space Grotesk";margin:10px 0 6px}
+.auth-modal h2 span{background:linear-gradient(100deg,#ff8edc,#bd70ff);color:transparent;background-clip:text}
+.auth-intro{font-size:13px;color:var(--muted);line-height:1.55;margin:0 0 18px}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border:1px solid var(--border);border-radius:12px;background:#151329;margin:15px 0}
+.auth-tab{border:0;border-radius:9px;padding:10px;background:transparent;color:#bcb5d0;font-weight:700;cursor:pointer}
+.auth-tab.active{background:linear-gradient(100deg,#ff83d5,#bd82ff);color:#281535}
+.google-auth{width:100%;display:flex;justify-content:center;align-items:center;gap:11px;padding:12px;border:1px solid #75648e;border-radius:10px;background:#ffffff0a;color:var(--text);font-weight:700;cursor:pointer}
+.google-auth:hover{border-color:#ff79d1;box-shadow:0 0 16px #ed82d433}
+.google-g{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#4285f4;font:bold 18px Arial}
+.auth-divider{display:flex;align-items:center;gap:10px;margin:17px 0;color:#988ba9;font-size:9px;letter-spacing:1.3px}
+.auth-divider:before,.auth-divider:after{content:"";height:1px;background:var(--border);flex:1}
+.auth-modal form{display:grid;gap:12px}
+.auth-modal form label{display:grid;gap:6px;color:#c3bad5;font-size:12px}
+.auth-modal input{width:100%;padding:12px;border:1px solid #55476f;border-radius:9px;background:#090d20;color:white;outline:none}
+.auth-modal input:focus{border-color:#f17bcf;box-shadow:0 0 0 3px #f17bcf22}
+.auth-modal label[hidden]{display:none}
+.auth-error{min-height:15px;margin:0;color:#ff8cae;font-size:12px}
+.auth-submit{width:100%}
+.auth-terms{text-align:center;color:#9388a7;font-size:10px;margin:14px 0 0}
+body.light .auth-modal{background:linear-gradient(145deg,#fffaff,#f0e9ff);color:#2a2040;border-color:#d8b8ef}
+body.light .auth-tabs{background:#e8def7}
+body.light .auth-tab{color:#74658d}
+body.light .auth-tab.active{color:#321a48}
+body.light .google-auth{color:#44345d;background:#fff;border-color:#dac8ec}
+body.light .auth-modal form label{color:#75668e}
+body.light .auth-modal input{background:#fff;color:#2c2043;border-color:#d9c8eb}
+body.light .auth-terms{color:#897b9f}
+@media(max-width:700px){.auth-modal{padding:25px 20px}}
+
+
+/* My Bookings — Firebase-backed account dashboard */
+.my-bookings-section{padding:42px 7.5% 55px;scroll-margin-top:88px;background:linear-gradient(180deg,rgba(15,10,34,.28),rgba(9,8,25,.55));border-top:1px solid var(--border)}
+.booking-account-note{font-size:12px;color:#c7a5e8}
+.my-bookings-list{display:grid;gap:13px;margin-top:22px}
+.bookings-empty{padding:25px;border:1px dashed #74518d;border-radius:14px;color:#b9b5ce;background:rgba(17,13,35,.55);text-align:center;font-size:13px}
+.inline-login{border:0;background:none;color:#ff8bd9;text-decoration:underline;cursor:pointer;font:inherit}
+.booking-item{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px;border:1px solid #68477e;border-radius:15px;background:linear-gradient(110deg,rgba(27,17,48,.9),rgba(12,14,34,.9));box-shadow:0 0 18px #d75bc911}
+.booking-item-category{font-size:9px;letter-spacing:2px;color:#ff8bd9}
+.booking-item h3{font:700 18px "Space Grotesk";margin:6px 0}
+.booking-item p{font-size:12px;color:#c4bfd6;margin:5px 0}
+.booking-item small{font-size:10px;color:#8f91ad}
+.cancel-booking{border:1px solid #a65a91;background:transparent;color:#ff9bdc;border-radius:20px;padding:9px 14px;font-size:11px;cursor:pointer;white-space:nowrap}
+.cancel-booking:hover{background:#6c214f55}
+.cancel-booking:disabled{opacity:.5;cursor:wait}
+.bookings-error{color:#ff9da9;border-color:#a34c65}
+@media(max-width:700px){.my-bookings-section{padding:32px 5% 42px}.booking-item{align-items:flex-start;flex-direction:column}.cancel-booking{align-self:flex-start}}
+body.light .my-bookings-section{background:linear-gradient(180deg,#f4eaff,#f8f4ff)}
+body.light .bookings-empty{background:#fff9;border-color:#b69acb;color:#59476a}
+body.light .booking-item{background:#fff;border-color:#c9a8dd}
+body.light .booking-item p{color:#655777}
+body.light .booking-item small{color:#847493}
+
+
+/* ADORA multi-column footer inspired by the supplied reference */
+.site-footer{display:block;padding:54px 7.5% 22px;border-top:1px solid var(--border);background:linear-gradient(180deg,rgba(14,18,37,.72),rgba(8,10,24,.98));color:#9eabc8;letter-spacing:0;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.35fr .85fr .95fr 1.15fr;gap:clamp(28px,4vw,72px);padding-bottom:42px}
+.footer-logo{font-size:29px;color:#fff;letter-spacing:-1.3px;margin-bottom:22px}
+.footer-logo .logo-clover{width:48px;height:48px;margin-right:8px;stroke:#ff83d7}
+.footer-logo>span:last-child{color:#fff!important}
+.footer-brand-column>p,.footer-newsletter>p{font-size:15px;line-height:1.75;color:#9eabc8;margin:0 0 20px;max-width:390px}
+.footer-socials{display:flex;gap:13px;margin-top:24px}
+.footer-socials a{width:44px;height:44px;border:1px solid #293653;background:#151d32;border-radius:50%;display:grid;place-items:center;color:#a9b8d4;font-size:19px;font-weight:700}
+.footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:17px}
+.footer-column h3{font:700 18px "Space Grotesk";color:#f5f4ff;margin:5px 0 20px}
+.footer-column>a{font-size:15px;color:#9eabc8;transition:color .2s,transform .2s}
+.footer-column>a:hover{color:#ff8bd9;transform:translateX(3px)}
+.newsletter-form{display:flex;gap:10px;width:100%;margin:2px 0 12px}
+.newsletter-form input{min-width:0;flex:1;height:52px;padding:0 18px;border:1px solid #293653;border-radius:14px;background:#172137;color:#fff;outline:none;font-size:14px}
+.newsletter-form input:focus{border-color:#e879d0;box-shadow:0 0 0 3px #e879d022}
+.newsletter-form button{width:58px;height:52px;border:0;border-radius:12px;background:linear-gradient(135deg,#7355ed,#8d4bea);color:#fff;font-size:22px;cursor:pointer;box-shadow:0 7px 20px #714ce944}
+.footer-newsletter small{font-size:12px;color:#9eabc8;line-height:1.5}
+.footer-bottom{border-top:1px solid #26314b;padding-top:20px;display:flex;justify-content:space-between;gap:15px;color:#8290ad;font-size:11px;letter-spacing:1px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body.light .site-footer{background:linear-gradient(180deg,#f5effb,#eee8f7);border-color:#e1d5f0}
+body.light .footer-column h3{color:#302440}body.light .footer-column>a,body.light .footer-brand-column>p,body.light .footer-newsletter>p,body.light .footer-newsletter small{color:#76698e}
+body.light .footer-socials a{background:#fff;border-color:#e1d5f0;color:#806d9b}
+body.light .footer-bottom{border-color:#e1d5f0;color:#8a7b9e}
+@media(max-width:950px){.footer-grid{grid-template-columns:1fr 1fr;gap:38px}.footer-brand-column>p{max-width:440px}}
+@media(max-width:560px){.site-footer{padding:38px 6% 20px}.footer-grid{grid-template-columns:1fr;gap:30px;padding-bottom:30px}.footer-logo{font-size:26px}.footer-column{gap:13px}.footer-column h3{margin:0 0 7px}.footer-bottom{flex-direction:column;font-size:10px;gap:9px}.newsletter-form input{height:48px}.newsletter-form button{height:48px;width:52px}}
